@@ -6,7 +6,14 @@
 		</div>
 
 		<div v-if="error" class="error">
-			{{ error }}
+			<p>{{ error }}</p>
+
+			<p>
+				<button @click.prevent='fetchData'>
+					Try Again
+				</button>
+			</p>
+
 		</div>
 
 		<ul v-if="users">
@@ -43,6 +50,9 @@ export default{
 				 .then(response => {
 				 	this.loading = false;
 				 	this.users = response.data;
+				 }).catch(error => {
+				 	this.loading = false;
+				 	this.error = error.response.data.message || error.message;
 				 });
 		}
 	}
