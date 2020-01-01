@@ -1,14 +1,14 @@
 require('./bootstrap');
 
-import Vue from 'Vue';
-import Vue from 'vue-router';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
 import App  from './vue-components/App.vue';
 import Home from './vue-components/Home.vue';
 import abtMe from './vue-components/AboutMe.vue';
-import abtSite from './vue-components/AboutSite/vue';
+import abtSite from './vue-components/AboutSite.vue';
 
 const router = new VueRouter({
 	mode: 'history',

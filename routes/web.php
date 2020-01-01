@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//we're going to use vue to route, not laravel, so have it catch all here
+//and pass it off to our SPA
+Route::get('/{any}', 'SPAController@index')->where('any', '.*'); 

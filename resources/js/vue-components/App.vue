@@ -3,8 +3,8 @@
 		<h1>My Resume Site</h1>
 		<span>
 			<router-link :to="{ name: 'home'}"> Home | </router-link>
-			<router-link :to="{ name: 'abtMe'}"> About Me | </router-link>
-			<router-link :to="{ name: 'abtSite'}"> About Site | </router-link>
+			<router-link :to="{ name: 'aboutme'}"> About Me | </router-link>
+			<router-link :to="{ name: 'aboutsite'}"> About Site | </router-link>
 		</span>
 	
 
