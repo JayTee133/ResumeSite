@@ -16,7 +16,23 @@ class SiteContentsTableSeeder extends Seeder
     	for($i=0; $i<8; ++$i){
 	        DB::table('site_contents')->insert([
 	        	'name' => Str::random(10),
-	        	'page' => Str::random(5),
+	        	'page' => 'aboutme',
+	        	'content' => Str::random(50),
+	        ]);
+	    }
+
+	    for($i=0; $i<8; ++$i){
+	        DB::table('site_contents')->insert([
+	        	'name' => Str::random(10),
+	        	'page' => 'aboutsite',
+	        	'content' => Str::random(50),
+	        ]);
+	    }
+
+	    for($i=0; $i<2; ++$i){
+	        DB::table('site_contents')->insert([
+	        	'name' => Str::random(10),
+	        	'page' => 'home',
 	        	'content' => Str::random(50),
 	        ]);
 	    }

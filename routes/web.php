@@ -12,6 +12,6 @@
 */
 
 
-//we're going to use vue to route, not laravel, so have it catch all here
+//we're going to use vue to navigate the site, not laravel, so have it catch all here
 //and pass it off to our SPA
 Route::get('/{any}', 'SPAController@index')->where('any', '.*'); 
