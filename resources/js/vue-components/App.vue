@@ -4,7 +4,7 @@
 		<span>
 			<router-link :to="{ name: 'home'}"> Home | </router-link>
 			<router-link :to="{ name: 'aboutme'}"> About Me | </router-link>
-			<router-link :to="{ name: 'aboutsite'}"> About Site | </router-link>
+			<router-link :to="{ name: 'aboutsite'}"> About Site </router-link>
 		</span>
 	
 
