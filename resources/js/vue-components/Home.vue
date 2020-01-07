@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2>Welcome!</h2>
+		<div class="text-center text-2xl mt-5">Welcome!</div>
 	
 		<div v-if='isLoading'>
 			Loading
