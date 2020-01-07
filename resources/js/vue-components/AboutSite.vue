@@ -1,5 +1,6 @@
 <template>
-	<div class="container mx-auto">
+	<div>
+		
 		<h2>About This Website</h2>
 	
 		<div v-if='isLoading'>
@@ -16,7 +17,7 @@
 				<p class="block text-blue-800 px-4 py-2 mt-2">  {{ entry.content }} </p>
 			</div>
 		</div>
-
+		
 	</div>
 
 </template>

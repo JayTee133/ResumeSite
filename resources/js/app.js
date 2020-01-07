@@ -3,6 +3,7 @@ require('./bootstrap');
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import '../sass/app.css';
+import '../sass/animate.css';
 
 Vue.use(VueRouter);
 
