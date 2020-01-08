@@ -1,6 +1,5 @@
 <template>
-	<div class="relative text-center">
-		<!-- <div class="text-2xl mt-3">Welcome!</div> -->
+	<div class="text-center">
 	
 		<div v-if='isLoading'>
 			Loading....
@@ -12,7 +11,7 @@
 
 		<div v-if='content'>
 			<div v-for="entry in content">
-				<div class="sm:text-2xl md:mx-48 my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md" v-html="entry.content"> </div>
+				<div class="font-sans sm:text-2xl md:mx-48 my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md" v-html="entry.content"> </div>
 			</div>
 		</div>
 		

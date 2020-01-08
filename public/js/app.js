@@ -1994,6 +1994,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2047,6 +2050,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -2062,7 +2085,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-//
 //
 //
 //
@@ -20420,7 +20442,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "text-center text-2xl mt-3" }, [
+    _c("div", { staticClass: "text-center text-2xl pt-3" }, [
       _vm._v("About This Website")
     ]),
     _vm._v(" "),
@@ -20469,68 +20491,97 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "bg-gray-100 h-screen" }, [
-    _c("div", { staticClass: "bg-green-200 rounded-b-lg shadow" }, [
-      _c("div", { staticClass: "text-center text-4xl pt-4" }, [
-        _vm._v("My Resume Site")
-      ]),
+  return _c(
+    "div",
+    { staticClass: "flex flex-col h-screen" },
+    [
+      _c(
+        "header",
+        {
+          staticClass: "h-24 top-0 inset-x-0 bg-green-200 rounded-b-lg shadow"
+        },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "text-center text-lg" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "hover:text-blue-600",
+                  attrs: { to: { name: "aboutme" } }
+                },
+                [_vm._v(" About Me")]
+              ),
+              _vm._v(" |\n\t\t\t"),
+              _c(
+                "router-link",
+                {
+                  staticClass: "hover:text-blue-600",
+                  attrs: { to: { name: "home" } }
+                },
+                [_vm._v(" Home ")]
+              ),
+              _vm._v(" |\n\t\t\t"),
+              _c(
+                "router-link",
+                {
+                  staticClass: "hover:text-blue-600",
+                  attrs: { to: { name: "aboutsite" } }
+                },
+                [_vm._v(" About Site ")]
+              )
+            ],
+            1
+          )
+        ]
+      ),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "text-center text-lg pb-1" },
+        { staticClass: "flex-auto overflow-auto", attrs: { id: "content" } },
         [
           _c(
-            "router-link",
+            "transition",
             {
-              staticClass: "hover:text-blue-600",
-              attrs: { to: { name: "aboutme" } }
+              attrs: {
+                "enter-active-class": _vm.dynEnter,
+                "leave-active-class": _vm.dynExit,
+                mode: "out-in"
+              }
             },
-            [_vm._v(" About Me")]
-          ),
-          _vm._v(" |\n\t\t\t"),
-          _c(
-            "router-link",
-            {
-              staticClass: "hover:text-blue-600",
-              attrs: { to: { name: "home" } }
-            },
-            [_vm._v(" Home ")]
-          ),
-          _vm._v(" |\n\t\t\t"),
-          _c(
-            "router-link",
-            {
-              staticClass: "hover:text-blue-600",
-              attrs: { to: { name: "aboutsite" } }
-            },
-            [_vm._v(" About Site ")]
+            [_c("router-view")],
+            1
           )
         ],
         1
-      )
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
+      ),
+      _vm._v(" "),
+      _c("Footer")
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { attrs: { href: "https://github.com/JayTee133/ResumeSite" } },
       [
         _c(
-          "transition",
-          {
-            attrs: {
-              "enter-active-class": _vm.dynEnter,
-              "leave-active-class": _vm.dynExit,
-              mode: "out-in"
-            }
-          },
-          [_c("router-view")],
-          1
+          "h1",
+          { staticClass: "text-center text-4xl pt-4 hover:text-blue-700" },
+          [_vm._v("My Resume Site")]
         )
-      ],
-      1
+      ]
     )
-  ])
-}
-var staticRenderFns = []
+  }
+]
 render._withStripped = true
 
 
@@ -20559,13 +20610,58 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "div",
-        { staticClass: "absolute inset-x-0 bottom-0 h-24 bg-gray-700 sticky" },
-        [_vm._v(" Hello There")]
-      )
-    ])
+    return _c(
+      "div",
+      {
+        staticClass:
+          "flex bottom-0 inset-x-0 h-16 items-center justify-center bg-green-200 shadow rounded"
+      },
+      [
+        _c(
+          "a",
+          { attrs: { href: "https://www.laravel.com", target: "_blank" } },
+          [
+            _c("img", {
+              staticClass: "h-10 mx-1",
+              attrs: { src: "/img/laravel.svg" }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { href: "https://www.tailwindcss.com", target: "_blank" } },
+          [
+            _c("img", {
+              staticClass: "h-12 mx-1",
+              attrs: { src: "/img/tailwindcss-logo.svg" }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { href: "https://www.vuejs.org", target: "_blank" } },
+          [
+            _c("img", {
+              staticClass: "h-10 mx-1",
+              attrs: { src: "/img/vuejs-logo.svg" }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { attrs: { href: "https://www.digitalocean.com", target: "_blank" } },
+          [
+            _c("img", {
+              staticClass: "h-10 mx-1",
+              attrs: { src: "/img/digitalocean-icon.svg" }
+            })
+          ]
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -20589,7 +20685,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative text-center" }, [
+  return _c("div", { staticClass: "text-center" }, [
     _vm.isLoading ? _c("div", [_vm._v("\n\t\tLoading....\n\t")]) : _vm._e(),
     _vm._v(" "),
     _vm.error
@@ -20603,7 +20699,7 @@ var render = function() {
             return _c("div", [
               _c("div", {
                 staticClass:
-                  "sm:text-2xl md:mx-48 my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md",
+                  "font-sans sm:text-2xl md:mx-48 my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md",
                 domProps: { innerHTML: _vm._s(entry.content) }
               })
             ])

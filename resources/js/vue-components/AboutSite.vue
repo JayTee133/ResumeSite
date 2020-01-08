@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="text-center text-2xl mt-3">About This Website</div>
+		<div class="text-center text-2xl pt-3">About This Website</div>
 
 		<div v-if='isLoading'>
 			Loading

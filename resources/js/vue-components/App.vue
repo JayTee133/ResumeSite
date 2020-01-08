@@ -1,23 +1,26 @@
 <template>
 	
-	<div class="bg-gray-100 h-screen">
-		<div class="bg-green-200 rounded-b-lg shadow">
-			<div class="text-center text-4xl pt-4">My Resume Site</div>
-			<div class="text-center text-lg pb-1">
+	<div class="flex flex-col h-screen">
+		<header class="h-24 top-0 inset-x-0 bg-green-200 rounded-b-lg shadow">
+			<a href="https://github.com/JayTee133/ResumeSite">
+				<h1 class="text-center text-4xl pt-4 hover:text-blue-700">My Resume Site</h1>
+			</a>
+			<div class="text-center text-lg">
 				<router-link class="hover:text-blue-600" :to="{ name: 'aboutme'}"> About Me</router-link> |
 				<router-link class="hover:text-blue-600" :to="{ name: 'home'}"> Home </router-link> |
 				<router-link class="hover:text-blue-600" :to="{ name: 'aboutsite'}"> About Site </router-link>
 			</div>
-		</div>
+		</header>
 	
 
-		<div>
+		<div id="content" class="flex-auto overflow-auto">
 			<transition :enter-active-class="dynEnter" :leave-active-class="dynExit" mode="out-in">
 				<router-view></router-view>
 			</transition>
 		</div>
+	
 
-		
+		<Footer></Footer>	
 	</div>
 	
 </template>
