@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h2>More About Me</h2>
-	
+		<div class="text-center text-2xl mt-3">More About Me</div>
+
 		<div v-if='isLoading'>
 			Loading
 		</div>

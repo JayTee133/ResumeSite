@@ -29,12 +29,20 @@ class SiteContentsTableSeeder extends Seeder
 	        ]);
 	    }
 
-	    for($i=0; $i<2; ++$i){
-	        DB::table('site_contents')->insert([
-	        	'name' => Str::random(10),
-	        	'page' => 'home',
-	        	'content' => Str::random(50),
-	        ]);
-	    }
+	    // for($i=0; $i<2; ++$i){
+	    //     DB::table('site_contents')->insert([
+	    //     	'name' => Str::random(10),
+	    //     	'page' => 'home',
+	    //     	'content' => Str::random(50),
+	    //     ]);
+	    // }
+    
+	    DB::table('site_contents')->insert([
+        	'name' => 'welcome',
+        	'page' => 'home',
+        	'content' => "Hi there! Welcome to my little resume site. <br> <br> Here you'll find more info about me, information about this site and a more pleasurable reading experience than a plain old resume. This site is a single page application built with Vue and Laravel (linked below in the footer).",
+        ]);
+
+
     }
 }

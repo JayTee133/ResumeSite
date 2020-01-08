@@ -1,8 +1,7 @@
 <template>
 	<div>
-		
-		<h2>About This Website</h2>
-	
+		<div class="text-center text-2xl mt-3">About This Website</div>
+
 		<div v-if='isLoading'>
 			Loading
 		</div>

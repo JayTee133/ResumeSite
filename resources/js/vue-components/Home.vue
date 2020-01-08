@@ -1,9 +1,9 @@
 <template>
-	<div>
-		<div class="text-center text-2xl mt-5">Welcome!</div>
+	<div class="relative text-center">
+		<!-- <div class="text-2xl mt-3">Welcome!</div> -->
 	
 		<div v-if='isLoading'>
-			Loading
+			Loading....
 		</div>
 
 		<div v-if='error'>
@@ -12,11 +12,12 @@
 
 		<div v-if='content'>
 			<div v-for="entry in content">
-				<h3> {{ entry.name }} </h3>
-				<p>  {{ entry.content }} </p>
+				<div class="sm:text-2xl md:mx-48 my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md" v-html="entry.content"> </div>
 			</div>
 		</div>
-
+		
+		<!-- <img class="max-w-xl object-center" src="/img/Tour_Eiffel_Wikimedia_Commons_(cropped).jpg"> -->
+	
 	</div>
 
 </template>

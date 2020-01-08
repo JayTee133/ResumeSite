@@ -1,10 +1,13 @@
 <template>
-	<div>
-		<div class="text-center text-4xl mt-4">My Resume Site</div>
-		<div class="text-center text-lg">
-			<router-link :to="{ name: 'aboutme'}"> About Me | </router-link>
-			<router-link :to="{ name: 'home'}"> Home |   </router-link>
-			<router-link :to="{ name: 'aboutsite'}"> About Site </router-link>
+	
+	<div class="bg-gray-100 h-screen">
+		<div class="bg-green-200 rounded-b-lg shadow">
+			<div class="text-center text-4xl pt-4">My Resume Site</div>
+			<div class="text-center text-lg pb-1">
+				<router-link class="hover:text-blue-600" :to="{ name: 'aboutme'}"> About Me</router-link> |
+				<router-link class="hover:text-blue-600" :to="{ name: 'home'}"> Home </router-link> |
+				<router-link class="hover:text-blue-600" :to="{ name: 'aboutsite'}"> About Site </router-link>
+			</div>
 		</div>
 	
 
@@ -13,17 +16,25 @@
 				<router-view></router-view>
 			</transition>
 		</div>
+
+		
 	</div>
+	
 </template>
 
 
 <script>
+	import Footer from './Footer.vue'
 	export default {
 		data() {
 			return {
 				dynEnter: 'animated fadeIn',
 				dynExit: 'animated fadeOut',
 			}
+			
+		},
+		components: {
+			Footer
 		},
 		watch: {
 			'$route' (to, from){
