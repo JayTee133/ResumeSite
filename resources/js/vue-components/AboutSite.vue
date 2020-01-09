@@ -10,7 +10,7 @@
 			{{ error }}
 		</div>
 
-		<div v-if='content'>
+		<div v-if='content' class="bg-white">
 			<div v-for="entry in content">
 				<h3> {{ entry.name }} </h3>
 				<p class="block text-blue-800 px-4 py-2 mt-2">  {{ entry.content }} </p>

@@ -1,7 +1,7 @@
 <template>
 	
 	<div class="flex flex-col h-screen">
-		<header class="h-24 top-0 inset-x-0 bg-green-200 rounded-b-lg shadow">
+		<header class="h-24 bg-green-200 rounded-b-lg shadow">
 			<a href="https://github.com/JayTee133/ResumeSite">
 				<h1 class="text-center text-4xl pt-4 hover:text-blue-700">My Resume Site</h1>
 			</a>
@@ -11,9 +11,9 @@
 				<router-link class="hover:text-blue-600" :to="{ name: 'aboutsite'}"> About Site </router-link>
 			</div>
 		</header>
-	
+	<!-- style="background-image: url(/img/gradient-bg.svg);" -->
 
-		<div id="content" class="flex-auto overflow-auto">
+		<div id="content" class="flex-auto overflow-auto" style="background-image: url(/img/backg.svg); background-size:100% 100%;">
 			<transition :enter-active-class="dynEnter" :leave-active-class="dynExit" mode="out-in">
 				<router-view></router-view>
 			</transition>

@@ -1,6 +1,6 @@
 <template>
 	
-		<div class="flex bottom-0 inset-x-0 h-16 items-center justify-center bg-green-200 shadow rounded"> 
+		<div class="flex h-16 items-center justify-center bg-green-200 shadow rounded"> 
 
 			<!-- <small class="absolute self-end mt-1 pb-3">powered by</small> -->
 			

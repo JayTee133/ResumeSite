@@ -20407,6 +20407,7 @@ var render = function() {
     _vm.content
       ? _c(
           "div",
+          { staticClass: "bg-white" },
           _vm._l(_vm.content, function(entry) {
             return _c("div", [
               _c("h3", [_vm._v(" " + _vm._s(entry.name) + " ")]),
@@ -20455,6 +20456,7 @@ var render = function() {
     _vm.content
       ? _c(
           "div",
+          { staticClass: "bg-white" },
           _vm._l(_vm.content, function(entry) {
             return _c("div", [
               _c("h3", [_vm._v(" " + _vm._s(entry.name) + " ")]),
@@ -20495,53 +20497,54 @@ var render = function() {
     "div",
     { staticClass: "flex flex-col h-screen" },
     [
-      _c(
-        "header",
-        {
-          staticClass: "h-24 top-0 inset-x-0 bg-green-200 rounded-b-lg shadow"
-        },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "text-center text-lg" },
-            [
-              _c(
-                "router-link",
-                {
-                  staticClass: "hover:text-blue-600",
-                  attrs: { to: { name: "aboutme" } }
-                },
-                [_vm._v(" About Me")]
-              ),
-              _vm._v(" |\n\t\t\t"),
-              _c(
-                "router-link",
-                {
-                  staticClass: "hover:text-blue-600",
-                  attrs: { to: { name: "home" } }
-                },
-                [_vm._v(" Home ")]
-              ),
-              _vm._v(" |\n\t\t\t"),
-              _c(
-                "router-link",
-                {
-                  staticClass: "hover:text-blue-600",
-                  attrs: { to: { name: "aboutsite" } }
-                },
-                [_vm._v(" About Site ")]
-              )
-            ],
-            1
-          )
-        ]
-      ),
+      _c("header", { staticClass: "h-24 bg-green-200 rounded-b-lg shadow" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "text-center text-lg" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "hover:text-blue-600",
+                attrs: { to: { name: "aboutme" } }
+              },
+              [_vm._v(" About Me")]
+            ),
+            _vm._v(" |\n\t\t\t"),
+            _c(
+              "router-link",
+              {
+                staticClass: "hover:text-blue-600",
+                attrs: { to: { name: "home" } }
+              },
+              [_vm._v(" Home ")]
+            ),
+            _vm._v(" |\n\t\t\t"),
+            _c(
+              "router-link",
+              {
+                staticClass: "hover:text-blue-600",
+                attrs: { to: { name: "aboutsite" } }
+              },
+              [_vm._v(" About Site ")]
+            )
+          ],
+          1
+        )
+      ]),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "flex-auto overflow-auto", attrs: { id: "content" } },
+        {
+          staticClass: "flex-auto overflow-auto",
+          staticStyle: {
+            "background-image": "url(/img/backg.svg)",
+            "background-size": "100% 100%"
+          },
+          attrs: { id: "content" }
+        },
         [
           _c(
             "transition",
@@ -20614,7 +20617,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "flex bottom-0 inset-x-0 h-16 items-center justify-center bg-green-200 shadow rounded"
+          "flex h-16 items-center justify-center bg-green-200 shadow rounded"
       },
       [
         _c(
