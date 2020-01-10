@@ -1,24 +1,25 @@
 <template>
-	<div class="text-center">
-	
-		<div v-if='isLoading'>
-			Loading....
-		</div>
-
-		<div v-if='error'>
-			{{ error }}
-		</div>
-
-		<div v-if='content'>
-			<div v-for="entry in content">
-				<div class="font-sans sm:text-2xl md:mx-48 my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md" v-html="entry.content"> </div>
-			</div>
-		</div>
+	<div class="inline-block w-3/5">
+		<div class="text-center">
 		
-		<!-- <img class="max-w-xl object-center" src="/img/Tour_Eiffel_Wikimedia_Commons_(cropped).jpg"> -->
-	
-	</div>
+			<div v-if='isLoading'>
+				Loading....
+			</div>
 
+			<div v-if='error'>
+				{{ error }}
+			</div>
+
+			<div v-if='content' class="font-sans sm:text-2xl my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md">
+				<div v-for="entry in content">
+					<div v-html="entry.content"> </div>
+				</div>
+			</div>
+			
+			<!-- <img class="max-w-xl object-center" src="/img/Tour_Eiffel_Wikimedia_Commons_(cropped).jpg"> -->
+		
+		</div>
+	</div>
 </template>
 
 <script>

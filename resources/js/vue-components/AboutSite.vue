@@ -10,13 +10,13 @@
 			{{ error }}
 		</div>
 
-		<div v-if='content' class="bg-white">
+		<div v-if='content' class="bg-gray-100 mt-2 shadow-lg rounded-lg">
 			<div v-for="entry in content">
-				<h3> {{ entry.name }} </h3>
-				<p class="block text-blue-800 px-4 py-2 mt-2">  {{ entry.content }} </p>
+				<p class="pl-4 pt-2"> {{ entry.name }} </p>
+				<p class="text-blue-800 px-4 pb-3 mt-1">  {{ entry.content }} </p>
 			</div>
 		</div>
-		
+
 	</div>
 
 </template>

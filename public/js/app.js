@@ -1995,8 +1995,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2011,17 +2009,17 @@ __webpack_require__.r(__webpack_exports__);
   watch: {
     '$route': function $route(to, from) {
       if (from.path === "/aboutsite") {
-        this.dynEnter = 'animated slideInLeft';
-        this.dynExit = 'animated slideOutRight';
+        this.dynEnter = 'animated fadeInLeft';
+        this.dynExit = 'animated fadeOutRight';
       } else if (from.path === "/aboutme") {
-        this.dynEnter = 'animated slideInRight';
-        this.dynExit = 'animated slideOutLeft';
+        this.dynEnter = 'animated fadeInRight';
+        this.dynExit = 'animated fadeOutLeft';
       } else if (from.path === "/" && to.path === '/aboutme') {
-        this.dynEnter = 'animated slideInLeft';
-        this.dynExit = 'animated slideOutRight';
+        this.dynEnter = 'animated fadeInLeft';
+        this.dynExit = 'animated fadeOutRight';
       } else if (from.path === "/" && to.path === '/aboutsite') {
-        this.dynEnter = 'animated slideInRight';
-        this.dynExit = 'animated slideOutLeft';
+        this.dynEnter = 'animated fadeInRight';
+        this.dynExit = 'animated fadeOutLeft';
       } else {
         this.dynEnter = 'animated fadeIn';
         this.dynExit = 'animated fadeOut';
@@ -2085,6 +2083,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
 //
 //
 //
@@ -20456,12 +20455,14 @@ var render = function() {
     _vm.content
       ? _c(
           "div",
-          { staticClass: "bg-white" },
+          { staticClass: "bg-gray-100 mt-2 shadow-lg rounded-lg" },
           _vm._l(_vm.content, function(entry) {
             return _c("div", [
-              _c("h3", [_vm._v(" " + _vm._s(entry.name) + " ")]),
+              _c("p", { staticClass: "pl-4 pt-2" }, [
+                _vm._v(" " + _vm._s(entry.name) + " ")
+              ]),
               _vm._v(" "),
-              _c("p", { staticClass: "block text-blue-800 px-4 py-2 mt-2" }, [
+              _c("p", { staticClass: "text-blue-800 px-4 pb-3 mt-1" }, [
                 _vm._v("  " + _vm._s(entry.content) + " ")
               ])
             ])
@@ -20497,48 +20498,52 @@ var render = function() {
     "div",
     { staticClass: "flex flex-col h-screen" },
     [
-      _c("header", { staticClass: "h-24 bg-green-200 rounded-b-lg shadow" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "text-center text-lg" },
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "hover:text-blue-600",
-                attrs: { to: { name: "aboutme" } }
-              },
-              [_vm._v(" About Me")]
-            ),
-            _vm._v(" |\n\t\t\t"),
-            _c(
-              "router-link",
-              {
-                staticClass: "hover:text-blue-600",
-                attrs: { to: { name: "home" } }
-              },
-              [_vm._v(" Home ")]
-            ),
-            _vm._v(" |\n\t\t\t"),
-            _c(
-              "router-link",
-              {
-                staticClass: "hover:text-blue-600",
-                attrs: { to: { name: "aboutsite" } }
-              },
-              [_vm._v(" About Site ")]
-            )
-          ],
-          1
-        )
-      ]),
+      _c(
+        "header",
+        { staticClass: "h-24 bg-green-200 text-center rounded-b-lg shadow" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "text-center text-lg" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "hover:text-blue-600",
+                  attrs: { to: { name: "aboutme" } }
+                },
+                [_vm._v(" About Me")]
+              ),
+              _vm._v(" |\n\t\t\t"),
+              _c(
+                "router-link",
+                {
+                  staticClass: "hover:text-blue-600",
+                  attrs: { to: { name: "home" } }
+                },
+                [_vm._v(" Home ")]
+              ),
+              _vm._v(" |\n\t\t\t"),
+              _c(
+                "router-link",
+                {
+                  staticClass: "hover:text-blue-600",
+                  attrs: { to: { name: "aboutsite" } }
+                },
+                [_vm._v(" About Site ")]
+              )
+            ],
+            1
+          )
+        ]
+      ),
       _vm._v(" "),
       _c(
         "div",
         {
-          staticClass: "flex-auto overflow-auto",
+          staticClass: "flex-auto flex flex-col items-center overflow-auto",
           staticStyle: {
             "background-image": "url(/img/backg.svg)",
             "background-size": "100% 100%"
@@ -20577,8 +20582,8 @@ var staticRenderFns = [
       { attrs: { href: "https://github.com/JayTee133/ResumeSite" } },
       [
         _c(
-          "h1",
-          { staticClass: "text-center text-4xl pt-4 hover:text-blue-700" },
+          "p",
+          { staticClass: "inline-block text-4xl mt-3 hover:text-blue-700" },
           [_vm._v("My Resume Site")]
         )
       ]
@@ -20617,9 +20622,13 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "flex h-16 items-center justify-center bg-green-200 shadow rounded"
+          "flex h-16 items-center justify-center bg-green-200 shadow rounded w-1/2 mx-auto"
       },
       [
+        _c("small", { staticClass: "absolute align -ml-40 mt-3 text-xs" }, [
+          _vm._v("powered by")
+        ]),
+        _vm._v(" "),
         _c(
           "a",
           { attrs: { href: "https://www.laravel.com", target: "_blank" } },
@@ -20688,28 +20697,32 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "text-center" }, [
-    _vm.isLoading ? _c("div", [_vm._v("\n\t\tLoading....\n\t")]) : _vm._e(),
-    _vm._v(" "),
-    _vm.error
-      ? _c("div", [_vm._v("\n\t\t" + _vm._s(_vm.error) + "\n\t")])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.content
-      ? _c(
-          "div",
-          _vm._l(_vm.content, function(entry) {
-            return _c("div", [
-              _c("div", {
-                staticClass:
-                  "font-sans sm:text-2xl md:mx-48 my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md",
-                domProps: { innerHTML: _vm._s(entry.content) }
-              })
-            ])
-          }),
-          0
-        )
-      : _vm._e()
+  return _c("div", { staticClass: "inline-block w-3/5" }, [
+    _c("div", { staticClass: "text-center" }, [
+      _vm.isLoading
+        ? _c("div", [_vm._v("\n\t\t\tLoading....\n\t\t")])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.error
+        ? _c("div", [_vm._v("\n\t\t\t" + _vm._s(_vm.error) + "\n\t\t")])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.content
+        ? _c(
+            "div",
+            {
+              staticClass:
+                "font-sans sm:text-2xl my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md"
+            },
+            _vm._l(_vm.content, function(entry) {
+              return _c("div", [
+                _c("div", { domProps: { innerHTML: _vm._s(entry.content) } })
+              ])
+            }),
+            0
+          )
+        : _vm._e()
+    ])
   ])
 }
 var staticRenderFns = []

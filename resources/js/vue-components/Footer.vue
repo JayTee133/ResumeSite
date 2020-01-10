@@ -1,8 +1,8 @@
 <template>
 	
-		<div class="flex h-16 items-center justify-center bg-green-200 shadow rounded"> 
+		<div class="flex h-16 items-center justify-center bg-green-200 shadow rounded w-1/2 mx-auto"> 
 
-			<!-- <small class="absolute self-end mt-1 pb-3">powered by</small> -->
+			<small class="absolute align -ml-40 mt-3 text-xs">powered by</small>
 			
 				<a href="https://www.laravel.com" target="_blank">  
 					<img class="h-10 mx-1" src="/img/laravel.svg">
