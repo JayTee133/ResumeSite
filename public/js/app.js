@@ -2066,8 +2066,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -20392,8 +20390,8 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "text-center text-2xl mt-3" }, [
+  return _c("div", { staticClass: "w-11/12 sm:w-3/4 xl:w-1/2 break-words" }, [
+    _c("div", { staticClass: "text-center text-2xl mt-2" }, [
       _vm._v("More About Me")
     ]),
     _vm._v(" "),
@@ -20406,12 +20404,16 @@ var render = function() {
     _vm.content
       ? _c(
           "div",
-          { staticClass: "bg-white" },
+          { staticClass: "bg-gray-100 mt-2 shadow-lg rounded-lg" },
           _vm._l(_vm.content, function(entry) {
             return _c("div", [
-              _c("h3", [_vm._v(" " + _vm._s(entry.name) + " ")]),
+              _c("h3", { staticClass: "pl-4 pt-2" }, [
+                _vm._v(" " + _vm._s(entry.name) + " ")
+              ]),
               _vm._v(" "),
-              _c("p", [_vm._v("  " + _vm._s(entry.content) + " ")])
+              _c("p", { staticClass: "text-blue-800 px-4 pb-3 mt-1" }, [
+                _vm._v("  " + _vm._s(entry.content) + " ")
+              ])
             ])
           }),
           0
@@ -20441,8 +20443,8 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "text-center text-2xl pt-3" }, [
+  return _c("div", { staticClass: "w-11/12 sm:w-3/4 xl:w-1/2 break-words" }, [
+    _c("div", { staticClass: "text-center text-2xl pt-2" }, [
       _vm._v("About This Website")
     ]),
     _vm._v(" "),
@@ -20455,14 +20457,14 @@ var render = function() {
     _vm.content
       ? _c(
           "div",
-          { staticClass: "bg-gray-100 mt-2 shadow-lg rounded-lg" },
+          { staticClass: "bg-gray-100 mt-2 shadow-lg rounded-lg mb-1" },
           _vm._l(_vm.content, function(entry) {
             return _c("div", [
               _c("p", { staticClass: "pl-4 pt-2" }, [
                 _vm._v(" " + _vm._s(entry.name) + " ")
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "text-blue-800 px-4 pb-3 mt-1" }, [
+              _c("p", { staticClass: "text-sm text-blue-800 px-4 pb-3 mt-1" }, [
                 _vm._v("  " + _vm._s(entry.content) + " ")
               ])
             ])
@@ -20496,7 +20498,13 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "flex flex-col h-screen" },
+    {
+      staticClass: "flex flex-col h-screen bg-no-repeat",
+      staticStyle: {
+        "background-image": "url(/img/backg.svg)",
+        "background-size": "100% 100%"
+      }
+    },
     [
       _c(
         "header",
@@ -20543,11 +20551,8 @@ var render = function() {
       _c(
         "div",
         {
-          staticClass: "flex-auto flex flex-col items-center overflow-auto",
-          staticStyle: {
-            "background-image": "url(/img/backg.svg)",
-            "background-size": "100% 100%"
-          },
+          staticClass:
+            "flex-auto flex flex-col items-center overflow-auto my-1",
           attrs: { id: "content" }
         },
         [
@@ -20622,10 +20627,10 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "flex h-16 items-center justify-center bg-green-200 shadow rounded w-1/2 mx-auto"
+          "flex h-20 items-center flex-initial justify-center bg-green-200 shadow rounded sm:mx-auto px-5"
       },
       [
-        _c("small", { staticClass: "absolute align -ml-40 mt-3 text-xs" }, [
+        _c("small", { staticClass: "absolute bottom-0 text-xs" }, [
           _vm._v("powered by")
         ]),
         _vm._v(" "),
@@ -20697,7 +20702,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "inline-block w-3/5" }, [
+  return _c("div", { staticClass: "inline-block w-10/12 sm:w-3/5 xl:w-1/3" }, [
     _c("div", { staticClass: "text-center" }, [
       _vm.isLoading
         ? _c("div", [_vm._v("\n\t\t\tLoading....\n\t\t")])
@@ -20712,7 +20717,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "font-sans sm:text-2xl my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md"
+                "font-sans text-lg sm:text-xl md:text-2xl my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md"
             },
             _vm._l(_vm.content, function(entry) {
               return _c("div", [

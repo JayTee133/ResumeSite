@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<div class="text-center text-2xl mt-3">More About Me</div>
+	<div class="w-11/12 sm:w-3/4 xl:w-1/2 break-words">
+		<div class="text-center text-2xl mt-2">More About Me</div>
 
 		<div v-if='isLoading'>
 			Loading
@@ -10,10 +10,10 @@
 			{{ error }}
 		</div>
 
-		<div v-if='content' class="bg-white">
+		<div v-if='content' class="bg-gray-100 mt-2 shadow-lg rounded-lg">
 			<div v-for="entry in content">
-				<h3> {{ entry.name }} </h3>
-				<p>  {{ entry.content }} </p>
+				<h3 class="pl-4 pt-2"> {{ entry.name }} </h3>
+				<p class="text-blue-800 px-4 pb-3 mt-1">  {{ entry.content }} </p>
 			</div>
 		</div>
 

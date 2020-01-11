@@ -1,6 +1,6 @@
 <template>
 	
-	<div class="flex flex-col h-screen">
+	<div class="flex flex-col h-screen bg-no-repeat" style="background-image: url(/img/backg.svg); background-size:100% 100%;">
 		<header class="h-24 bg-green-200 text-center rounded-b-lg shadow">
 			<a href="https://github.com/JayTee133/ResumeSite">
 				<p class="inline-block text-4xl mt-3 hover:text-blue-700">My Resume Site</p>
@@ -12,15 +12,15 @@
 			</div>
 		</header>
 
-		<div id="content" class="flex-auto flex flex-col items-center overflow-auto" style="background-image: url(/img/backg.svg); background-size:100% 100%;">
+		<div id="content" class="flex-auto flex flex-col items-center overflow-auto my-1">
 			<transition :enter-active-class="dynEnter" :leave-active-class="dynExit" mode="out-in">
 				<router-view></router-view>
 			</transition>
 		</div>
-	
+
 		<Footer></Footer>
 	</div>
-	
+
 </template>
 
 
