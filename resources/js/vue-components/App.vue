@@ -12,7 +12,7 @@
 			</div>
 		</header>
 
-		<div id="content" class="flex-auto flex flex-col items-center overflow-auto my-1">
+		<div id="content" class="flex-auto flex flex-col items-center overflow-auto pb-3">
 			<transition :enter-active-class="dynEnter" :leave-active-class="dynExit" mode="out-in">
 				<router-view></router-view>
 			</transition>

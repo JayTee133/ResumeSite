@@ -12,8 +12,8 @@
 
 		<div v-if='content' class="bg-gray-100 mt-2 shadow-lg rounded-lg mb-1">
 			<div v-for="entry in content">
-				<p class="pl-4 pt-2"> {{ entry.name }} </p>
-				<p class="text-sm text-blue-800 px-4 pb-3 mt-1">  {{ entry.content }} </p>
+				<p class="pl-4 pt-2 text-xl "> {{ entry.name }} </p>
+				<p class="text-lg text-blue-800 px-4 pb-3 mt-1" v-html="entry.content"></p>
 			</div>
 		</div>
 

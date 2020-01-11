@@ -20407,13 +20407,14 @@ var render = function() {
           { staticClass: "bg-gray-100 mt-2 shadow-lg rounded-lg" },
           _vm._l(_vm.content, function(entry) {
             return _c("div", [
-              _c("h3", { staticClass: "pl-4 pt-2" }, [
+              _c("h3", { staticClass: "pl-4 pt-2 text-xl" }, [
                 _vm._v(" " + _vm._s(entry.name) + " ")
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "text-blue-800 px-4 pb-3 mt-1" }, [
-                _vm._v("  " + _vm._s(entry.content) + " ")
-              ])
+              _c("p", {
+                staticClass: "text-lg text-blue-800 px-4 pb-3 mt-1",
+                domProps: { innerHTML: _vm._s(entry.content) }
+              })
             ])
           }),
           0
@@ -20460,13 +20461,14 @@ var render = function() {
           { staticClass: "bg-gray-100 mt-2 shadow-lg rounded-lg mb-1" },
           _vm._l(_vm.content, function(entry) {
             return _c("div", [
-              _c("p", { staticClass: "pl-4 pt-2" }, [
+              _c("p", { staticClass: "pl-4 pt-2 text-xl " }, [
                 _vm._v(" " + _vm._s(entry.name) + " ")
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "text-sm text-blue-800 px-4 pb-3 mt-1" }, [
-                _vm._v("  " + _vm._s(entry.content) + " ")
-              ])
+              _c("p", {
+                staticClass: "text-lg text-blue-800 px-4 pb-3 mt-1",
+                domProps: { innerHTML: _vm._s(entry.content) }
+              })
             ])
           }),
           0
