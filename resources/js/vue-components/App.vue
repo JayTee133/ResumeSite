@@ -3,7 +3,7 @@
 	<div class="flex flex-col h-screen bg-no-repeat" style="background-image: url(/img/backg.svg); background-size:100% 100%;">
 		<header class="h-24 bg-green-200 text-center rounded-b-lg shadow">
 			<a href="https://github.com/JayTee133/ResumeSite">
-				<p class="inline-block text-4xl mt-3 hover:text-blue-700">My Resume Site</p>
+				<p class="inline-block text-4xl mt-3 hover:text-blue-700">Jack's Resume</p>
 			</a>
 			<div class="text-center text-lg">
 				<router-link class="hover:text-blue-600" :to="{ name: 'aboutme'}"> About Me</router-link> |

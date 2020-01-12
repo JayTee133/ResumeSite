@@ -20554,7 +20554,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "flex-auto flex flex-col items-center overflow-auto my-1",
+            "flex-auto flex flex-col items-center overflow-auto pb-3",
           attrs: { id: "content" }
         },
         [
@@ -20591,7 +20591,7 @@ var staticRenderFns = [
         _c(
           "p",
           { staticClass: "inline-block text-4xl mt-3 hover:text-blue-700" },
-          [_vm._v("My Resume Site")]
+          [_vm._v("Jack's Resume")]
         )
       ]
     )
@@ -36303,8 +36303,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/jt/Desktop/res_site/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/jt/Desktop/res_site/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/jaytee/Desktop/ResumeSite/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/jaytee/Desktop/ResumeSite/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
