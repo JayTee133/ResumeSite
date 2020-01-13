@@ -20632,7 +20632,7 @@ var staticRenderFns = [
           "flex h-20 items-center flex-initial justify-center bg-green-200 shadow rounded sm:mx-auto px-5"
       },
       [
-        _c("small", { staticClass: "absolute bottom-0 text-xs" }, [
+        _c("small", { staticClass: "self-end pb-5 justify-center text-xs" }, [
           _vm._v("powered by")
         ]),
         _vm._v(" "),
@@ -20704,7 +20704,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "inline-block w-10/12 sm:w-3/5 xl:w-1/3" }, [
+  return _c("div", { staticClass: "my-auto w-10/12 sm:w-3/5 xl:w-1/3" }, [
     _c("div", { staticClass: "text-center" }, [
       _vm.isLoading
         ? _c("div", [_vm._v("\n\t\t\tLoading....\n\t\t")])
@@ -20719,7 +20719,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "font-sans text-lg sm:text-xl md:text-2xl my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md"
+                "font-sans text-lg sm:text-xl md:text-2xl bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md"
             },
             _vm._l(_vm.content, function(entry) {
               return _c("div", [

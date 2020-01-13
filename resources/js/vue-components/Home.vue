@@ -1,5 +1,5 @@
 <template>
-	<div class="inline-block w-10/12 sm:w-3/5 xl:w-1/3">
+	<div class="my-auto w-10/12 sm:w-3/5 xl:w-1/3">
 		<div class="text-center">
 		
 			<div v-if='isLoading'>
@@ -10,7 +10,7 @@
 				{{ error }}
 			</div>
 
-			<div v-if='content' class="font-sans text-lg sm:text-xl md:text-2xl my-24 bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md">
+			<div v-if='content' class="font-sans text-lg sm:text-xl md:text-2xl bg-gray-200 p-2 sm:p-8 rounded-lg shadow-md">
 				<div v-for="entry in content">
 					<div v-html="entry.content"> </div>
 				</div>

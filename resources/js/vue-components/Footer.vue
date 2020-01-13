@@ -2,7 +2,7 @@
 	
 		<div class="flex h-20 items-center flex-initial justify-center bg-green-200 shadow rounded sm:mx-auto px-5"> 
 
-			<small class="absolute bottom-0 text-xs">powered by</small>
+			<small class="self-end pb-5 justify-center text-xs">powered by</small>
 			
 				<a href="https://www.laravel.com" target="_blank">  
 					<img class="h-10 mx-1" src="/img/laravel.svg">
